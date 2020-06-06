@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>馨宜💗花坊</title>
+		<script src="javascripts/angular-route.min.js"></script>
+		<script src="javascripts/angular.min.js"></script>
+		<!--<script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>-->
+		<script src="javascripts/jquery-3.3.1.min.js"></script>
+		<script src="javascripts/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+		<link rel="stylesheet" href="stylesheets/app.animations.css" />
+		<link rel="stylesheet" href="stylesheets/app.css" />
+		<link rel="stylesheet" href="stylesheets/Message Board.css" />
+		<link rel="stylesheet" href="stylesheets/style.css" />
+	</head>
+
+	<body ng-app="flower" ng-controller="myFlowerApp">
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<!--navbar-fixed-top:使其固定在顶端-->
+			<div class="container">
+				<!--去掉-fluid，让其在中间显示。-->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">  <!--navbar-toggle collapsed表折叠菜单-->
+                    <span class="icon-bar"></span>  <!--收缩菜单（按钮）上的小横线-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+					<a class="navbar-brand" href="#">馨宜💗花坊</a>
+				</div>
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a class="active" href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="#">Festival </a>
+						</li>
+						<li>
+							<a href="#">Species</a>
+						</li>
+						<li>
+							<a href="#">Show</a>
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+
+		<!--轮播效果：-->
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="images/flower/flower1.JPG" alt="..." style="height: 100%;">
+
+					<div class="carousel-caption">
+						<div class="content-center">
+							<div class="photo-container">
+								<img src="img/logo1.PNG" class="carousel_img">
+							</div>
+							<h3 class="title">馨宜💗花坊</h3>
+							<p class="category">Fall In Love</p>
+							<div class="content">
+								<div class="social-description">
+									<h2>NO.3</h2>
+									<p>花店排名</p>
+								</div>
+								<div class="social-description">
+									<h2>262662</h2>
+									<p>访问量</p>
+								</div>
+								<div class="social-description">
+									<h2>1126</h2>
+									<p>评价数</p>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/flower/flower2.JPG" alt="...">
+					<div class="carousel-caption">
+						<div class="carousel-caption">
+							<div class="content-center">
+								<div class="photo-container">
+									<img src="img/logo1.PNG" class="carousel_img">
+								</div>
+								<h3 class="title">馨宜💗花坊</h3>
+								<p class="category">Fall In Love</p>
+								<div class="content">
+									<div class="social-description">
+										<h2>NO.3</h2>
+										<p>花店排名</p>
+									</div>
+									<div class="social-description">
+										<h2>262662</h2>
+										<p>访问量</p>
+									</div>
+									<div class="social-description">
+										<h2>1126</h2>
+										<p>评价数</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/flower/flower3.JPG" alt="..." style="height: 100%;">
+					<div class="carousel-caption">
+						<div class="carousel-caption">
+							<div class="content-center">
+								<div class="photo-container">
+									<img src="img/logo1.PNG" class="carousel_img">
+								</div>
+								<h3 class="title">馨宜💗花坊</h3>
+								<p class="category">Fall In Love</p>
+								<div class="content">
+									<div class="social-description">
+										<h2>NO.3</h2>
+										<p>花店排名</p>
+									</div>
+									<div class="social-description">
+										<h2>262662</h2>
+										<p>访问量</p>
+									</div>
+									<div class="social-description">
+										<h2>1126</h2>
+										<p>评价数</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">上一页</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">下一页</span>
+				</a>
+			</div>
+		</div>
+
+		<!--简介-->
+		<hr class="divider"></hr>
+
+		<div class="section">
+			<div class="container">
+				<div style="background-image: url(../background/fall.gif);">
+					<p class="title">网站特色</p>
+					<p class="description">
+						<h3>独立设计</h3> 在花里，每款作品都有属于自己独一无二的名字和小诗。在这里你可以找到不同于其他任何地方的设计， 也保证了独一无二的审美体验。
+						<h3>100%实物拍摄</h3> 花里的每一款作品照片均是经过花艺师亲手制作之后，在自有的专业摄影棚里进行100%实物拍摄。 这样可以确保所有作品在抵达顾客手中时，与网站图片所示完全相符。 [2]
+						<h3>只选最新鲜花材</h3> 所有作品只选用当天抵达上海的花材制作，以保证花材的新鲜与美丽。
+						<h3>指定日期送达</h3> 鲜花对于每一位送花人及收花人来说，都是纪念意义重大的礼物。花里提供指定日期送达服务。
+						<h3>贴心质量保证</h3> 每一份自花里送出的作品，都经过了精心的设计和制作。但有时会因为一些快递和其他意外情况致使收到产品不尽如人意。 针对这种情况，花里承诺对于顾客不满意的作品进行妥善处理，直至用户满意。
+						</br>
+						<!--<span id="des_span" class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>新沂新安镇青年路二中北门老工会对过。
+					<span id="des_span" class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>联系方式：183617xxxxx(微信、手机号同步)-->
+
+					</p>
+				</div>
+				<hr class="divider"></hr>
+
+				<div class="container-fluid">
+					<div class="row">
+						<h1 id="h1">花品信息</h1><br />
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+							<div class="search">
+								<a class="btn btn-info" data-toggle="modal" data-target="#addModal">添加鲜花</a>
+								<input type="text" id="inputtext" ng-model="text" placeholder="请输入你想要的鲜花">
+								<input type="button" value="查找" class="btn btn-default" ng-click="searchrecord()">
+							</div>
+							<br />
+							<table cellpadding="0" cellspacing="0" class="table table-striped" style="background-image: url(images/flower.png);">
+								<thead>
+									<tr>
+										<td>销量排名</td>
+										<td>花名</td>
+										<td>售价</td>
+										<td>产地</td>
+										<td>操作</td>
+									</tr>
+								</thead>
+								<tr ng-repeat=" x in names">
+									<td>{{x.id}}</td>
+									<td>{{x.Name}}</td>
+									<td>{{x.price}}</td>
+									<td>{{x.home}}</td>
+									<td>
+										<input type="button" ng-click="update(x)" value="修改" class="btn btn-warning" data-toggle="modal" data-target="#updateModal" />
+										<input type="button" ng-click="deleterecord(x)" value="删除" class="btn btn-danger" />
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<hr class="divider"></hr>
+				<div class="row" id="row">
+					<h1 id="h1">鲜花展示</h1><br />
+					<!--<div class="col-md-3"></div>-->
+					<div class="col-md-8">
+						<div class="nav-align-center">
+							<ul class="nav nav-pills nav-pills-primary" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#profile" role="tablist">
+										<img src="img/flower/img3.jpg" />
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" data-toggle="tab" href="#home" role="tablist">
+										<img src="img/flower/img5.jpg" />
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#messages" role="tablist">
+										<img src="img/flower/img13.jpg" />
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- Tab panes -->
+					<div class="tab-content gallery">
+						<div class="tab-pane " id="home" role="tabpanel">
+
+							<div class="row collections">
+								<!--<div class="col-md-2"></div>-->
+								<div class="col-md-12">
+									<img src="img/flower/img4.jpg" alt="" class="img-raised">
+									<img src="img/flower/img8.jpg" alt="" class="img-raised">
+									<img src="img/flower/img1.jpg" alt="" class="img-raised">
+									<!--<img src="img/flower/img2.jpg" alt="" class="img-raised">-->
+								</div>
+							</div>
+
+						</div>
+						<div class="tab-pane active" id="profile" role="tabpanel">
+
+							<div class="row collections">
+								<!--<div class="col-md-2"></div>-->
+								<div class="col-md-12">
+									<img src="img/flower/img10.jpg" class="img-raised">
+									<img src="img/flower/img6.jpg" alt="" class="img-raised">
+									<img src="img/flower/img7.jpg" alt="" class="img-raised">
+									<!--<img src="img/flower/img9.jpg" alt="" class="img-raised">-->
+								</div>
+							</div>
+
+						</div>
+						<div class="tab-pane" id="messages" role="tabpanel">
+
+							<div class="row collections">
+								<!--<div class="col-md-2"></div>-->
+								<div class="col-md-12">
+									<img src="img/flower/img11.jpg" alt="" class="img-raised">
+									<img src="img/flower/img12.jpg" alt="" class="img-raised">
+									<img src="img/flower/img13.jpg" alt="" class="img-raised">
+									<!--<img src="img/flower/img14.jpg" class="img-raised">-->
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<!--<div class="col-md-1"></div>-->
+
+			</div>
+		</div>
+		<hr class="divider"></hr>
+
+		<footer>
+			<img src="images/foot.png" width="100%" height="30px" />
+		</footer>
+
+		<!-- addModal -->
+		<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">加入花库</h4>
+					</div>
+					<div class="modal-body">
+						花名：<input type="text" class="form-control" id="exampleInputEmail1" ng-model="Name" placeholder="请输入花名"> 花价：
+						<input type="text" class="form-control" id="exampleInputPassword1" ng-model="price" placeholder="请输入花价"> 花源：
+						<input type="text" class="form-control" id="exampleInputEmail1" ng-model="home" placeholder="请输入花源">
+						<span ng-bind="message"></span>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+						<button type="button" class="btn btn-primary" ng-click="add()">加入库存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- updateModal -->
+		<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">修改</h4>
+					</div>
+					<div class="modal-body">
+
+						花名：<input type="text" class="form-control" id="exampleInputEmail1" ng-model="newname" placeholder="请输入花名"> 花价：
+						<input type="text" class="form-control" id="exampleInputPassword1" ng-model="newprice" placeholder="请输入花价"> 花源：
+						<input type="text" class="form-control" id="exampleInputEmail1" ng-model="newhome" placeholder="请输入花源">
+						<span ng-bind="message"></span>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">返回花库</button>
+						<button type="button" class="btn btn-primary" ng-click="updaterecord()">修改成功</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var app = angular.module("flower", []);
+		app
+			.controller('myFlowerApp', function($scope, $http) {
+				$http
+					.get("http://192.168.137.25:8181/users")
+					.then(function successCallback(response) {
+						$scope.names = response.data;
+					}, function errorCallback(response) {
+
+					});
+q				//添加
+				$scope.add = function() {
+					$http
+						.put("http://192.168.137.25:8181/users?Name=" + $scope.Name + "&price=" + $scope.price + "&home=" + $scope.home)
+						.then(function successCallback(response) {
+							$scope.message = response.data;
+							window.location.reload();
+						}, function errorCallback(response) {
+
+						});
+				};
+				//查询
+				$scope.searchrecord = function() {
+					$http
+						.post("http://192.168.137.25:8181/users?text=" + $scope.text)
+						.then(function successCallback(response) {
+							$scope.names = response.data;
+						}, function errorCallback(response) {
+
+						});
+				}
+				//更新
+				$scope.update = function(x) {
+					var index = x.id;
+					$scope.updaterecord = function(x) {
+						id = index;
+						$http
+							.patch("http://192.168.137.25:8181/users?id=" + id + "&Name=" + $scope.newname + "&price=" + $scope.newprice + "&home=" + $scope.newhome)
+							.then(function successCallback(response) {
+
+								//								window.location.reload();									
+							}, function errorCallback(response) {
+
+							});
+						window.location.reload();
+					}
+
+				}
+				//删除
+				$scope.deleterecord = function(x) {
+					var inx = x.id;
+					$http
+						.delete("http://192.168.137.25:8181/users?id=" + inx)
+						.then(function successCallback(response) {
+							if(response.data = "success") {
+								window.location.reload();
+							}
+						}, function errorCallback(response) {});
+				}
+			});
+	</script>
+
+</html>
